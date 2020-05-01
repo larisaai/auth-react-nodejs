@@ -1,12 +1,12 @@
-
+const credentials = require("./config/dbcredentials")
 module.exports = {
 
   development: {
-    client: 'mysq',
+    client: 'mysql',
     connection: {
-      database: 'webdevusers',
-      user:     'root',
-      password: ''
+      database: credentials.database,
+      user: credentials.user,
+      password: credentials.password
     }
   }
 
