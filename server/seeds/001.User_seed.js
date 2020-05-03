@@ -7,8 +7,8 @@ exports.seed = function(knex) {
       .then(function () {
         // Inserts seed entries
         return knex('users').insert([                     // password
-          { username: 'admin', first_name: '', password: '$2b$10$G/v/MRwgMgOAtCUCQRKJTO8GRD/rKxyu61J5wfYimsHd0/FSxuVAq'  }, 
-          { username: 'poweruser', password: '$2b$10$G/v/MRwgMgOAtCUCQRKJTO8GRD/rKxyu61J5wfYimsHd0/FSxuVAq'  }, 
+          { username: 'admin', first_name: '', password: '$2b$10$Xa6gIk7nyobJJrX9oJeTdeBHnKGercF.RJ/UCTM27HMLuU3hY3QUK'  }, 
+          { username: 'poweruser', password: '$2b$10$Xa6gIk7nyobJJrX9oJeTdeBHnKGercF.RJ/UCTM27HMLuU3hY3QUK'  }, 
         ]);
       }).then((userId) => {
         return knex('addresses').insert([
