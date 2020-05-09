@@ -1,9 +1,19 @@
 const express = require("express");
 const app =  express();
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
 
+app.use(
+    cors({
+      origin: ['http://localhost:8080', 'http://localhost:3000'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      credentials: true, // enable set cookie
+    })
+  );
 app.use(express.urlencoded({ extended: false })); //for forms
 app.use(express.json());
 
+app.use(cookieParser());
 
 // setup db
 const { Model } = require('objection');
